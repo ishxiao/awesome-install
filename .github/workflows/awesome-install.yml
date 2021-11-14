@@ -7,5 +7,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run script file
         run: |
-          chmod +x "${GITHUB_WORKSPACE}/swift-install.sh"
-          "${GITHUB_WORKSPACE}/swift-install.sh"
+          cd ../../
+          chmod +x ./swift-install.sh
+          ./swift-install.sh
