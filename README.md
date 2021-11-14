@@ -1,10 +1,12 @@
 # awesome-install
 Install an app via a bash script.
 
-# list
+[![Build Status](https://github.com/ishxiao/awesome-install/workflows/awesome-install/badge.svg)](https://github.com/ishxiao/awesome-install/actions?query=workflow%3Aawesome-install)
 
-* flask
-* swift
+## list
+
+- [flask](https://github.com/ishxiao/awesome-install/blob/main/flask_install.sh)
+- [swift](https://github.com/ishxiao/awesome-install/blob/main/swift_install.sh)
 
 ## Contributing
 

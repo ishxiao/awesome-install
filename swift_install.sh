@@ -17,7 +17,7 @@ echo "Preparing step I: update and upgrade." 1>&3
 apt update && apt upgrade -y
 #
 echo "Preparing step II: Install required dependencies." 1>&3
-apt-get install \
+apt-get install -y \
           binutils \
           git \
           gnupg2 \
@@ -32,14 +32,15 @@ apt-get install \
           libz3-dev \
           pkg-config \
           tzdata \
-          zlib1g-dev -y
+          uuid-dev \
+          zlib1g-dev
 
 echo "5 steps." 1>&3
 
 echo "Step 1. Download the latest binary release above." 1>&3
 
 URL=https://swift.org
-VER=5.4.1
+VER=5.5.1
 PLATFORM=ubuntu2004
 PLATFORMSRC=ubuntu20.04
 SWIFT_NAME=swift-${VER}

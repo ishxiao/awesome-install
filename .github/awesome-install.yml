@@ -1,0 +1,11 @@
+name: awesome-install
+on: [push]
+jobs:
+  run_tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run script file
+        run: |
+          chmod +x ./swift-install.sh
+        shell: bash
