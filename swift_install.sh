@@ -55,7 +55,7 @@ wget ${TOOLCHAIN_URL}
 
 wget ${DIGITAL_SIGNATURE_URL}
 
-echo "Step 2. Import the PGP keys into your keyring:." 1>&3
+echo "Step 2. Import the PGP keys into your keyring." 1>&3
 wget -q -O - https://swift.org/keys/all-keys.asc | gpg --import -
 
 echo "Step 3. Verify the PGP signature." 1>&3
@@ -66,7 +66,7 @@ echo "Step 4. Extract the archive to /opt/${SWIFT_NAME}." 1>&3
 tar xzf ${TOOLCHAIN_TAR}
 mv ${TOOLCHAIN_NAME} /opt/${SWIFT_NAME}
 
-echo "Step 5. Add the Swift toolchain to your path" 1>&3
+echo "Step 5. Add the Swift toolchain to your path." 1>&3
 echo "export PATH=/opt/${SWIFT_NAME}/usr/bin:"\${PATH}"" 
 
 echo "# Swift
