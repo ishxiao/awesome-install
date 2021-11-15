@@ -139,7 +139,7 @@ echo "export PATH=\"/opt/${SWIFT_NAME}/usr/bin:\${PATH}\""
 # source ~/.bashrc
 
 # enable current swift environment
-export PATH=/opt/${SWIFT_NAME}/usr/bin:${PATH}"
+export PATH="/opt/${SWIFT_NAME}/usr/bin"
 
 Swift --version
 
