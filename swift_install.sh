@@ -131,7 +131,7 @@ tar xzf ${TOOLCHAIN_TAR}
 mv ${TOOLCHAIN_NAME} /opt/${SWIFT_NAME}
 
 echo "Step 5. Add the Swift toolchain to your path." 1>&3
-echo "export PATH=/opt/${SWIFT_NAME}/usr/bin:"\${PATH}"" 
+echo "export PATH=\"/opt/${SWIFT_NAME}/usr/bin:\${PATH}\"" 
 
 echo "# Swift
 export PATH=\"/opt/${SWIFT_NAME}/usr/bin:\${PATH}\"" >> ~/.bashrc
@@ -139,7 +139,7 @@ export PATH=\"/opt/${SWIFT_NAME}/usr/bin:\${PATH}\"" >> ~/.bashrc
 source ~/.bashrc
 
 # enable current swift environment
-export PATH=\"/opt/${SWIFT_NAME}/usr/bin:\${PATH}\""
+export PATH=/opt/${SWIFT_NAME}/usr/bin:${PATH}"
 
 echo "Finished." 1>&3
 
