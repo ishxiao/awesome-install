@@ -7,6 +7,4 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run script file
         run: |
-          wget -L https://github.com/ishxiao/awesome-install/blob/main/swift_install.sh
-          chmod +x ./swift-install.sh
-          ./swift-install.sh
+          sudo sh swift-install.sh

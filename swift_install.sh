@@ -2,8 +2,9 @@
 # author: Xiao Shang
 # note: Install Swift on Ubuntu 20.04
 # ref url: https://swift.org/download/#using-downloads
-# chmod +x ./install.sh
-# ./install.sh
+# sudo chmod +x ./swift.sh
+# ./iswift.sh
+# sudo sh swift.sh
 # run as root
 
 LOG_FILE=swift_install_log.txt
@@ -60,7 +61,7 @@ wget -q -O - https://swift.org/keys/all-keys.asc | gpg --import -
 
 echo "Step 3. Verify the PGP signature." 1>&3
 gpg --keyserver hkp://pool.sks-keyservers.net --refresh-keys Swift
-gpg --verify DIGITAL_SIGNATURE_NAME
+gpg --verify ${DIGITAL_SIGNATURE_NAME}
 
 echo "Step 4. Extract the archive to /opt/${SWIFT_NAME}." 1>&3
 tar xzf ${TOOLCHAIN_TAR}
@@ -70,11 +71,12 @@ echo "Step 5. Add the Swift toolchain to your path." 1>&3
 echo "export PATH=/opt/${SWIFT_NAME}/usr/bin:"\${PATH}"" 
 
 echo "# Swift
-export PATH=/opt/${SWIFT_NAME}/usr/bin:"\${PATH}"" >> ~/.bashrc
+export PATH=\"/opt/${SWIFT_NAME}/usr/bin:\${PATH}\"" >> ~/.bashrc
 
-echo "run:
 source ~/.bashrc
-to activate the swift environment immediately."  1>&3
+
+# enable current swift environment
+export PATH=\"/opt/${SWIFT_NAME}/usr/bin:\${PATH}\""
 
 echo "Finished." 1>&3
 
