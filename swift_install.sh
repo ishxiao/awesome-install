@@ -133,15 +133,15 @@ mv ${TOOLCHAIN_NAME} /opt/${SWIFT_NAME}
 echo "Step 5. Add the Swift toolchain to your path." 1>&3
 echo "export PATH=\"/opt/${SWIFT_NAME}/usr/bin:\${PATH}\"" 
 
-# echo "# Swift
-# export PATH=\"/opt/${SWIFT_NAME}/usr/bin:\${PATH}\"" >> ~/.bashrc
+echo "# Swift
+export PATH=\"/opt/${SWIFT_NAME}/usr/bin:\${PATH}\"" >> ~/.bashrc
 
-# source ~/.bashrc
+source ~/.bashrc
 
 # enable current swift environment
 export PATH="/opt/${SWIFT_NAME}/usr/bin"
 
-Swift --version
+Swift --version 1>&3
 
 echo "Finished." 1>&3
 
