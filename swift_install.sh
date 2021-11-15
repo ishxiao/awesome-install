@@ -82,7 +82,7 @@ EOF
   fi
 }
 
-install() {
+
 exec 3>&1 1>>${LOG_FILE} 2>&1 # Writing outputs to log file(log.txt)
 
 echo "Install Swift on Ubuntu 20.04." 1>&3
@@ -144,14 +144,3 @@ export PATH=/opt/${SWIFT_NAME}/usr/bin:${PATH}"
 echo "Finished." 1>&3
 
 echo "More details in ${LOG_FILE}." 1>&3
-}
-
-iswift() {
-     check_root
-     install
-}
-
-## Defer install until we have the complete script
-iswift "$@"
-
-exit "$status"
