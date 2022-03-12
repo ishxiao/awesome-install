@@ -2,9 +2,8 @@
 # author: Xiao Shang
 # note: Install Swift on Ubuntu 20.04
 # ref url: https://swift.org/download/#using-downloads
-# sudo chmod +x ./swift.sh
-# ./iswift.sh
-# sudo sh swift.sh
+# chmod +x ./i*.sh
+# sudo sh i*.sh
 # run as root
 
 LOG_FILE=swift_install_log.txt
