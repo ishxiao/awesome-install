@@ -2,8 +2,8 @@
 # author: Xiao Shang
 # note: Deploy a Flask Website on Nginx with uWSGI
 # ref url: https://www.vultr.com/docs/deploy-a-flask-website-on-nginx-with-uwsgi
-# chmod +x ./install.sh
-# ./install.sh
+# chmod +x ./i*.sh
+# sudo sh i*.sh
 
 LOG_FILE=flask_install_log.txt
 exec 3>&1 1>>${LOG_FILE} 2>&1 # Writing outputs to log file(log.txt)
